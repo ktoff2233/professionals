@@ -1,3 +1,15 @@
+# TESTING
+
+"devDependencies": {
+    "jest": "^26.6.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^16.4.0-0"
+  },
+
+
+
+
+
 # Client-side Web Application
 
 This project is a web application built with a React front-end and a Flask back-end, utilizing a MySQL database. Below are the instructions for setting up and running the client-side application.
