@@ -18,11 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/get_traders")
-def get_traders(db: Session = Depends(get_db)):
-    try:
-        traders = db.query(Trader).all()
-        return traders
-    except Exception as e:
-        print(f"Error fetching traders: {e}")
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+@app.post("/login")
+async def login(id: str = Query(...), password: str = Query(...)):
+    # Add your authentication logic here
+    return {"message": "Login successful"}
+
