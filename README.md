@@ -78,6 +78,7 @@ web-app-project
 ## Running Tests
 
 ### Client Tests
+#### (MAY BE BROKEN, enzyme adapter was not installing, debug later or find alternative)
 
 To run the unit tests for the React application, navigate to the `client` directory and run:
 ```
