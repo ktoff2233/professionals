@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Trader from './components/Trader';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Trader />
   </React.StrictMode>,
   document.getElementById('root')
 );
