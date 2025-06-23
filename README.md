@@ -70,9 +70,9 @@ web-app-project
 
 3. Set up the database using the `schema.sql` file located in the `database` directory.
 
-4. Start the Flask application:
+4. Run fastapi backend
    ```
-   python -m app
+   uvicorn server:app --reload
    ```
 
 ## Running Tests
