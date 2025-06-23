@@ -23,3 +23,12 @@ async def login(id: str = Query(...), password: str = Query(...)):
     # Add your authentication logic here
     return {"message": "Login successful"}
 
+@app.get("/traders/{trader_id}")
+async def get_trader(trader_id: int):
+    try:
+        with get_db_context() as db:
+            traders = db.query(Trader).filter_by(id=trader_id).all()
+            return [{"id": trader.id, "fname": trader.fname, "lname": trader.lname, "score": trader.score, "manager_id": trader.manager_id} for trader in traders]
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
