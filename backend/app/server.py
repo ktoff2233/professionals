@@ -18,3 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.post("/login")
+async def login(id: str = Query(...), password: str = Query(...)):
+    # Add your authentication logic here
+    return {"message": "Login successful"}
+
